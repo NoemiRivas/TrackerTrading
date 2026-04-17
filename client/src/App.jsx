@@ -8,10 +8,13 @@ import Dashboard from "./pages/Dashboard"
 import Settings from "./pages/Statics"
 import Trades from "./pages/Trades"
 
+import Navbar from "./components/Navbar"
+
 function App() {
 
 	return (
 			<BrowserRouter>
+			<Navbar/>
 				<Routes>
 					<Route path="/addtrade" element={<AddNewTrade />} />
 					<Route path="/" element={<Dashboard />} />
