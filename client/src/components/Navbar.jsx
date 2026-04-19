@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
- <nav>
+ <nav className="">
     <Link to={"/settings"}>configuracion</Link>
     <Link to={"/"}>inicio</Link>
     <Link to={"/alltrades"}>trades</Link>
