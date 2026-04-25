@@ -7,19 +7,33 @@
     --font-robot:"Roboto";
     --font-fira-sans:"Fira+Sans";
 
-    --color-textprimary: #f6f7f9;
+    --color-textprimary: #e5e9f6;
     
     --color-background-black: #0f121a;
+    --color-background-button:#2d6dcd;
+
+    --color-cardbackground:#14315c;
+
 
 }
 
 
 @layer base{
     * {
-        @apply max-w-7xl m-auto p-2 text-center
+        @apply max-w-7xl m-auto p-2 text-center text-textprimary
     }
     body{
         @apply bg-background-black text-textprimary font-robot 
     }
-  
+    
+    button{
+        @apply bg-background-button rounded-xl font-medium capitalize cursor-pointer
+    }
+    h1 , h2, h3{
+        @apply text-textprimary capitalize, font-fira-sans
+    }
+    li{
+        @apply list-none text-textprimary
+    }
 }
+

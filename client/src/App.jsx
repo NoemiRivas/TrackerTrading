@@ -10,7 +10,7 @@ import Dashboard from "./pages/Dashboard"
 import Settings from "./pages/Statics"
 import Trades from "./pages/Trades"
 
-import Navbar from "./components/Navbar"
+import Navbar from "./components/ui/Navbar"
 
 function App() {
 

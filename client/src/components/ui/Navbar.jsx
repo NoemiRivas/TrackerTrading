@@ -6,18 +6,18 @@ function Navbar() {
   return (
     <nav className="flex justify-between font-bold capitalize ">
       <Link to={"/"}>inicio</Link>
-      <Link to={"/alltrades"}>trades</Link>
+      <Link to={"/alltrades"}>Historial</Link>
 
-      <div>
+      <button>
         {/**el boton de agrgar un nuevo trade se muestra solo cuando se ha iniciado secion */}
         <Link to={"/addtrade"}>nuevo trade</Link>
-      </div>
+      </button>
       
-      <div>
-        <button c>inicio</button>
+      <div className='flex justify-center gap-2'>
+        <button>inicio</button>
         {/* boton inicio secion o crear una cuenta*/}
         {/**el boton de configuracion se muestra solo cuando se ha iniciado secion */}
-        <Link to={"/settings"}>configuracion</Link>
+        <button><Link to={"/settings"}>configuracion</Link></button>
       </div>
     </nav>
   )

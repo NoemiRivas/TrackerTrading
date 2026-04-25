@@ -27,8 +27,6 @@ const mockAccount = {
   nombre: "Noemi Guadalupe Bonilla Rivas",
   iniciales: "NG",
   plataforma: "Ninjatrader",
-  firma: "TopstepTrader",
-  tipoCuenta: "Funded",
   balanceInicial: 50000,
   balanceActual: 52340,
   pnlNeto: 2340,
@@ -37,12 +35,8 @@ const mockAccount = {
   totalTrades: 20,
   wins: 14,
   losses: 6,
-  avgRR: 1.8,
-  estado: "activo",
   fechaInicio: "1/01/2025",
-  timezone: "America/Mexico_City",
-  instrumentos: ["MNQ", "MES", "MGC", "MCL"],
-  setups: ["continuacion", "breakout", "pullback", "reversal"],
+ 
 };
 
 const mockPlatforms = [
@@ -111,4 +105,4 @@ const mockFundingAccounts = [
   },
 ];
 
-export default {mockTrades, mockAccount, mockPlatforms, mockFundingAccounts} 
+export default{mockTrades, mockAccount, mockPlatforms, mockFundingAccounts} 
