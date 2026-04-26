@@ -22,7 +22,7 @@ const mockTrades = [
   { id: 20, fecha: "15/12/2026", instrumento: "MNQ", setup: "continuacion", resultado: "win" },
 ];
 
-const mockAccount = {
+ const mockAccount = {
   id: "TRD-00142",
   nombre: "Noemi Guadalupe Bonilla Rivas",
   iniciales: "NG",
