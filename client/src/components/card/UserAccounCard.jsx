@@ -3,7 +3,7 @@ import React from 'react'
 import mockData from '../../utils/mockData'
 
 const UserAccounCard = () => {
-    const { iniciales, nombre, plataforma, fechaInicio, balanceInicial, balanceActual, pnlNeto, drawdownMax } = mockData.mockAccount
+    const { iniciales, nombre, fechaInicio } = mockData.mockAccount
     return (
         <section className='bg-cardbackground/50 p-4 rounded-xl '>
             <h1 className='text-justify'>Bienvenida Trader</h1>
@@ -15,18 +15,12 @@ const UserAccounCard = () => {
                     </span>
                     <span>
                         <h2>{nombre}</h2>
-                        <p className='text-justify text-sm text-textprimary/40 capitalize'> inicio: {fechaInicio}</p>
+                        <p className='text-justify text-sm text-textprimary/40 '> inicio: {fechaInicio}</p>
                     </span>
 
                 </div>
 
-                <div className='ml-0 flex justify-around capitalize'>
-                    <p className=''>plataforma: {plataforma}</p>
-                    <p>balance actual: ${balanceActual}</p>
-                    <p>balance inicial: ${balanceInicial}</p>
-                    <p>pnlNeto: ${pnlNeto}</p>
-                    <p>drawdownMax: ${drawdownMax}</p>
-                </div>
+                
             </div>
 
         </section>

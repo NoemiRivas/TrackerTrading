@@ -30,10 +30,16 @@
         @apply bg-background-button rounded-xl font-medium capitalize cursor-pointer
     }
     h1 , h2, h3{
-        @apply text-textprimary capitalize, font-fira-sans
+        @apply text-textprimary capitalize 
     }
     li{
         @apply list-none text-textprimary
+    }
+}
+
+@layer utilities {
+    .theme-card {
+        @apply bg-cardbackground/20  rounded-xl w-sm p-4 capitalize
     }
 }
 
