@@ -13,7 +13,8 @@
     --color-background-button:#2d6dcd;
 
     --color-cardbackground:#14315c;
-
+    --color-tablebackgr:#2f307e;
+    --color-tablethead:#43458d;
 
 }
 
@@ -35,11 +36,16 @@
     li{
         @apply list-none text-textprimary
     }
+    table{
+        @apply bg-tablebackgr/20 
+    }
+   
 }
 
 @layer utilities {
     .theme-card {
         @apply bg-cardbackground/20  rounded-xl w-sm p-4 capitalize
     }
+    
 }
 
