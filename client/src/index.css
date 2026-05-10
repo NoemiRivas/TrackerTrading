@@ -1,51 +1,57 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-    --font-robot:"Roboto";
-    --font-fira-sans:"Fira+Sans";
+    --font-robot: "Roboto";
+    --font-fira-sans: "Fira+Sans";
 
     --color-textprimary: #e5e9f6;
-    
-    --color-background-black: #0f121a;
-    --color-background-button:#2d6dcd;
 
-    --color-cardbackground:#14315c;
-    --color-tablebackgr:#2f307e;
-    --color-tablethead:#43458d;
+    --color-background-black: #0f121a;
+    --color-background-button: #2d6dcd;
+
+    --color-cardbackground: #14315c;
+    --color-tablebackgr: #2f307e;
+    --color-tablethead: #43458d;
 
 }
 
 
-@layer base{
+@layer base {
     * {
-        @apply max-w-7xl m-auto p-2 text-center text-textprimary
+        @apply max-w-full m-auto p-2 max-md:p-0 text-center text-white
     }
-    body{
-        @apply bg-background-black text-textprimary font-robot 
+
+    body {
+        @apply bg-stone-950  text-textprimary font-robot
     }
-    
-    button{
-        @apply bg-background-button rounded-xl font-medium capitalize cursor-pointer
+
+    button {
+        @apply bg-slate-800 rounded-xl font-medium capitalize cursor-pointer
     }
-    h1 , h2, h3{
-        @apply text-textprimary capitalize 
+
+    h1, h2, h3 {
+        @apply text-white capitalize
     }
-    li{
-        @apply list-none text-textprimary
+
+    li {
+        @apply list-none text-white
     }
-    table{
-        @apply bg-tablebackgr/20 
+
+    table {
+        @apply bg-stone-950
     }
-   
+
 }
 
 @layer utilities {
     .theme-card {
-        @apply bg-cardbackground/20  rounded-xl w-sm p-4 capitalize
+        @apply bg-stone-900 rounded-xl w-sm p-4 capitalize
     }
-    
-}
 
+    .navbarhover {
+        @apply max-md:w-full max-md:bg-stone-900/50 max-md:p-4 hover:border-b hover:border-b-neutral-500 cursor-pointer max-md:m-2 max-md:text-justify rounded-xl rounded-b-none max-md:rounded-b-none max-md:border-b max-md:border-stone-600 focus:border-b focus:rounded-b-none focus:border-violet-400 transition duration-300
+    }
+
+}

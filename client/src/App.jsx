@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router"
 
 
 
-import AddNewTrade from "./pages/AddNewTrade"
+import AccountsTrade from "./pages/AccountsTrade"
 import Dashboard from "./pages/Dashboard"
 import Settings from "./pages/Statics"
 import Trades from "./pages/Trades"
@@ -18,7 +18,7 @@ function App() {
 			<BrowserRouter>
 			<Navbar/>
 				<Routes>
-					<Route path="/addtrade" element={<AddNewTrade />} />
+					<Route path="/AccountsTrade" element={<AccountsTrade />} />
 					<Route path="/" element={<Dashboard />} />
 					<Route path="/settings" element={<Settings />} />
 					<Route path="/alltrades" element={<Trades />} />
