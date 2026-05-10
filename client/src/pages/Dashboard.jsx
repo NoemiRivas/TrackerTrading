@@ -6,9 +6,6 @@ import HistoryTrades from '../components/ui/HistoryTrades'
 function Dashboard() {
   return (
     <main>
-      <div>
-        <h2>Resumen</h2>
-      </div>
       <UserAccounCard/>
       <Metricard />
       {/**curva de trades con graficos */}

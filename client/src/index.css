@@ -47,7 +47,7 @@
 
 @layer utilities {
     .theme-card {
-        @apply bg-stone-900 rounded-xl w-sm p-4 capitalize
+        @apply bg-stone-900 rounded-xl w-sm p-4 capitalize text-[18px]  font-bold text-stone-400 hover:bg-violet-600/50 hover:text-white cursor-pointer max-md:text-sm max-md:p-6
     }
 
     .navbarhover {
