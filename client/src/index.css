@@ -42,6 +42,9 @@
     table {
         @apply bg-stone-950
     }
+    th{
+        @apply text-[16px] font-bold capitalize text-stone-200 cursor-pointer max-md:text-sm max-md:p-4 outline-0
+    }
 
 }
 
