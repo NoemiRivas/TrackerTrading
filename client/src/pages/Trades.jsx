@@ -1,15 +1,29 @@
 import React from 'react'
 import TableTrades from '../components/table/TableTrades'
 import Metricard from '../components/card/Metricard'
+import mockTrades from '../utils/mockData'
 import mockData from '../utils/mockData'
 
 function Trades() {
- const { balanceActual, pnlNeto, drawdownMax, winrate, totalTrades, wins, losses } = mockData.mockAccount
 
-   const metrics = [
-    { label: "balance actual", value: balanceActual, prefix: "$ " },
-    { label: "pnl neto", value: pnlNeto, prefix: "$ " },
-    { label: "trades totales", value: totalTrades },
+
+ const  [{id,pnlNeto, resultado}]= mockData.mockTrades
+ 
+ const totalTrades = mockData.mockTrades.map(num=>{
+      const prices = num.pnlNeto
+      console.log("desde funcion",prices)
+ } )
+
+
+
+ console.log("total:", totalTrades)
+
+
+   const metrics = [/**{ label: "total trades:", value: , prefix: "$ " },
+    { label: "win rate", value: , prefix: "$ " },
+    { label: "total P&L ", value:  },
+    { label: "profit factor ", value:  }, */
+    
    
   ]
 
