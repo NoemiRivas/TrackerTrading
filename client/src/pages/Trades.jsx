@@ -1,40 +1,35 @@
 import React from 'react'
 import TableTrades from '../components/table/TableTrades'
 import Metricard from '../components/card/Metricard'
-import mockTrades from '../utils/mockData'
+
 import mockData from '../utils/mockData'
 
 function Trades() {
 
 
- const  [{id,pnlNeto, resultado}]= mockData.mockTrades
- 
- const totalTrades = mockData.mockTrades.map(num=>{
-      const prices = num.pnlNeto
-      console.log("desde funcion",prices)
- } )
+  const trades = mockData.mockTrades
+  const wins = trades.filter((e) => e.resultado === "win")
+  const losses = trades.filter((e) => e.resultado === "loss")
+  const totalPnl = trades.reduce((s, t) => s + (t.pnlNeto || 0), 0)
+  /*const winRate = trades.length > 0 ? (wins.length / trades.length * 100).toFixed(0) : 0∫*/
+  const lossPnL = Math.abs(losses.reduce((s, t) => s + (t.pnlNeto || 0), 0));
+  const winPnL = wins.reduce((s, t) => s + (t.pnlNeto || 0), 0);
+  const profitFactor = lossPnL > 0 ? (winPnL / lossPnL).toFixed(2) : wins.length > 0 ? '∞' : '0';
+  const totalTrade = trades.length
 
+  const metrics = [{ label: "total trades:", value: totalTrade },
 
-
- console.log("total:", totalTrades)
-
-
-   const metrics = [/**{ label: "total trades:", value: , prefix: "$ " },
-    { label: "win rate", value: , prefix: "$ " },
-    { label: "total P&L ", value:  },
-    { label: "profit factor ", value:  }, */
-    
-   
+  { label: "profit factor ", value: profitFactor }, { label: "total P&L ", value: totalPnl, prefix: "$ " }
   ]
 
   return (
-    <>
-    <h1>
+    <main>
+      <h1>
         Todas las operaciones
-    </h1>
-    <Metricard items={metrics}/>
-    <TableTrades/>
-    </>
+      </h1>
+      <Metricard items={metrics} />
+      <TableTrades />
+    </main>
   )
 }
 
