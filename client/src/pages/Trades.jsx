@@ -24,10 +24,10 @@ function Trades() {
 
   return (
     <main>
-      <h1>
+      <h1 className='py-8'>
         Todas las operaciones
       </h1>
-      <Metricard items={metrics} />
+      <Metricard items={metrics}/>
       <TableTrades />
     </main>
   )
